@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link, Route, Routes, useNavigate } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Cart from './Pages/Cart'
@@ -16,9 +16,13 @@ import Children from './Pages/Children'
 
 const App = () => {
   const navigate = useNavigate()
+  const hasRedirectedOnStartup = useRef(false)
 
   useEffect(() => {
-    navigate('/', { replace: true })
+    if (!hasRedirectedOnStartup.current) {
+      hasRedirectedOnStartup.current = true
+      navigate('/', { replace: true })
+    }
   }, [navigate])
 
   return (
