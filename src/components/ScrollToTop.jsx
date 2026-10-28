@@ -1,12 +1,19 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { key } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  useLayoutEffect(() => {
+    window.history.scrollRestoration = "manual";
+    const frame = window.requestAnimationFrame(() => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [key]);
 
   return null;
 }

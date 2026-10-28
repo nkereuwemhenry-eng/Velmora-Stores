@@ -85,15 +85,6 @@ export default function Login() {
             />
           </div>
 
-          <div className="text-right">
-            <Link
-              to="/forgot-password"
-              className="text-sm font-medium text-[#8a6b12] hover:underline"
-            >
-              Forgot password?
-            </Link>
-          </div>
-
           {message && (
             <p
               role="status"

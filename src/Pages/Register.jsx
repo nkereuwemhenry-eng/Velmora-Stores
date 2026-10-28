@@ -164,9 +164,6 @@ export default function Register() {
           </Link>
         </p>
 
-        <p className="mt-6 text-center text-xs leading-5 text-gray-500">
-          By registering, you agree to Velmora's terms and privacy policy.
-        </p>
       </section>
     </main>
   );

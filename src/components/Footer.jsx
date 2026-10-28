@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className="bg-black text-gray-300">
 
       {/* Main footer */}
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-3 lg:px-10">
 
         {/* Brand information */}
         <div>
@@ -86,49 +86,10 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Customer service */}
+        {/* Contact and social links */}
         <div>
           <h3 className="mb-5 text-lg font-semibold text-white">
-            Customer Care
-          </h3>
-
-          <ul className="space-y-3 text-sm">
-            <li>
-              <Link to="/contact" className="transition hover:text-yellow-400">
-                Contact Us
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/faq" className="transition hover:text-yellow-400">
-                Frequently Asked Questions
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/shipping" className="transition hover:text-yellow-400">
-                Shipping Information
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/returns" className="transition hover:text-yellow-400">
-                Returns & Exchanges
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/privacy" className="transition hover:text-yellow-400">
-                Privacy Policy
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        {/* Social media */}
-        <div>
-          <h3 className="mb-5 text-lg font-semibold text-white">
-            Stay Connected
+            Contact & Social
           </h3>
 
           <p className="mb-5 text-sm leading-6 text-gray-400">
