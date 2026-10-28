@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import Cart from './Pages/Cart'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
@@ -15,6 +16,7 @@ import Children from './Pages/Children'
 const App = () => {
   return (
     <div>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route
